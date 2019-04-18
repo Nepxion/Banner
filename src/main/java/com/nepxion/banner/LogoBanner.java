@@ -11,20 +11,13 @@ package com.nepxion.banner;
 
 import static com.taobao.text.ui.Element.label;
 
-import java.io.InputStream;
-
-import org.apache.commons.io.IOUtils;
-
 import com.taobao.text.Color;
 import com.taobao.text.Decoration;
 import com.taobao.text.ui.LabelElement;
 import com.taobao.text.ui.TableElement;
 import com.taobao.text.util.RenderUtil;
 
-public class Logo {
-    // Logo文本文件位置
-    private String location;
-
+public class LogoBanner extends AbstractBanner {
     // Logo元素的总个数
     private int elementCount;
 
@@ -37,11 +30,9 @@ public class Logo {
     // Logo字体是否发亮
     private boolean boldOff;
 
-    // Logo
-    private String logo = "Welcome to Nepxion";
+    public LogoBanner(Class<?> resourceClass, String resourceLocation, String defaultBanner, int elementCount, int elementLineCount, Color[] elementColors, boolean boldOff) {
+        super(resourceClass, resourceLocation, defaultBanner);
 
-    public Logo(String location, int elementCount, int elementLineCount, Color[] elementColors, boolean boldOff) {
-        this.location = location;
         this.elementCount = elementCount;
         this.elementLineCount = elementLineCount;
         this.elementColors = elementColors;
@@ -50,16 +41,13 @@ public class Logo {
         initialize();
     }
 
-    private void initialize() {
-        InputStream inputStream = null;
-        try {
-            inputStream = Logo.class.getResourceAsStream(location);
-            String text = IOUtils.toString(inputStream, BannerConstant.ENCODING_UTF_8);
-
+    @Override
+    protected String generateBanner(String bannerText) {
+        if (bannerText != null) {
             StringBuilder stringBuilder = new StringBuilder();
             String[] elementTexts = new String[elementCount]; // Logo元素的总个数
             int i = 0, j = 0;
-            for (String line : text.split("\n")) {
+            for (String line : bannerText.split("\n")) {
                 stringBuilder.append(line);
                 stringBuilder.append("\n");
                 if (i++ == elementLineCount - 1) { // Logo元素的单个占行数减1
@@ -81,21 +69,9 @@ public class Logo {
             TableElement tableElement = new TableElement();
             tableElement.row(labelElements);
 
-            logo = RenderUtil.render(tableElement);
-        } catch (Exception e) {
-            e.printStackTrace();
-        } finally {
-            if (inputStream != null) {
-                IOUtils.closeQuietly(inputStream);
-            }
+            return RenderUtil.render(tableElement);
+        } else {
+            return defaultBanner;
         }
-    }
-
-    public String getLogo() {
-        return logo;
-    }
-
-    public String getPlainTextLogo() {
-        return RenderUtil.ansiToPlainText(logo);
     }
 }

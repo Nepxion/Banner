@@ -11,26 +11,27 @@ package com.nepxion.banner.test;
 
 import java.io.IOException;
 
-import com.nepxion.banner.Logo;
-import com.nepxion.banner.Version;
+import com.nepxion.banner.LogoBanner;
+import com.nepxion.banner.VersionBanner;
 import com.taobao.text.Color;
 
 public class BannerTest {
     public static void main(String[] args) {
-        Logo logo1 = new Logo("/com/nepxion/banner/res/logo-halo-1.txt", 4, 7, new Color[] { Color.red, Color.yellow, Color.cyan, Color.magenta }, false);
-        System.out.println(logo1.getLogo());
-        System.out.println(logo1.getPlainTextLogo());
+        LogoBanner banner1 = new LogoBanner(BannerTest.class, "/com/nepxion/banner/resource/logo-halo-1.txt", "Welcome to Nepxion", 4, 7, new Color[] { Color.red, Color.yellow, Color.cyan, Color.magenta }, false);
+        System.out.println(banner1.getBanner());
+        System.out.println(banner1.getPlainBanner());
 
-        Logo logo2 = new Logo("/com/nepxion/banner/res/logo-halo-2.txt", 4, 5, new Color[] { Color.red, Color.yellow, Color.cyan, Color.magenta }, false);
-        System.out.println(logo2.getLogo());
-        System.out.println(logo2.getPlainTextLogo());
+        LogoBanner banner2 = new LogoBanner(BannerTest.class, "/com/nepxion/banner/resource/logo-halo-2.txt", "Welcome to Nepxion", 4, 5, new Color[] { Color.red, Color.yellow, Color.cyan, Color.magenta }, false);
+        System.out.println(banner2.getBanner());
+        System.out.println(banner2.getPlainBanner());
 
-        Logo logo3 = new Logo("/com/nepxion/banner/res/logo-arthas.txt", 6, 5, new Color[] { Color.red, Color.yellow, Color.cyan, Color.magenta, Color.green, Color.blue }, true);
-        System.out.println(logo3.getLogo());
-        System.out.println(logo3.getPlainTextLogo());
+        LogoBanner banner3 = new LogoBanner(BannerTest.class, "/com/nepxion/banner/resource/logo-arthas.txt", "Welcome to Nepxion", 6, 5, new Color[] { Color.red, Color.yellow, Color.cyan, Color.magenta, Color.green, Color.blue }, true);
+        System.out.println(banner3.getBanner());
+        System.out.println(banner3.getPlainBanner());
 
-        Version version = new Version(Version.class, "/com/nepxion/banner/res/version.txt");
-        System.out.println(version.getVersion());
+        VersionBanner banner4 = new VersionBanner(BannerTest.class, "/com/nepxion/banner/resource/version.txt", "Unknown Version");
+        System.out.println(banner4.getBanner());
+        System.out.println(banner4.getPlainBanner());
 
         try {
             System.in.read();
