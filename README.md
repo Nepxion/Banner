@@ -26,6 +26,7 @@ Nepxion Banner是一款基于Taobao Text的旗标生成器
 
 ## 示例
 通过此网站制作旗标的文本文件，手工在文本文件里处理成一个旗标元素占单行的格式
+
 [http://patorjk.com/software/taag/#p=display&f=Soft&t=Nepxion](http://patorjk.com/software/taag/#p=display&f=Soft&t=Nepxion)
 
 具体实现
@@ -66,4 +67,4 @@ public class BannerTest {
 
 运行结果
 
-![Alt text](https://github.com/Nepxion/Docs/blob/master/banner-doc/banner.jpg)
+![Alt text](https://github.com/Nepxion/Docs/blob/master/banner-doc/Banner.jpg)
