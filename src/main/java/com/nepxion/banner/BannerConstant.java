@@ -15,6 +15,7 @@ public class BannerConstant {
     public static final String BANNER_SHOWN = "nepxion.banner.shown";
     public static final String BANNER_SHOWN_ANSI_MODE = "nepxion.banner.shown.ansi.mode";
     public static final String VERSION = "Version";
+    public static final String PLUGIN = "Plugin";
     public static final String SITE = "Site";
     public static final String NEPXION_SITE = "http://www.nepxion.com";
     public static final String GITHUB = "Github";
