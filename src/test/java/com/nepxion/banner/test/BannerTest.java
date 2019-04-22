@@ -38,8 +38,8 @@ public class BannerTest {
         List<Description> descriptions = new ArrayList<Description>();
         descriptions.add(new Description("Version:", versionBanner.getBanner(), 0, 10));
         descriptions.add(new Description("Site:", "http://www.nepxion.com", 0, 10));
-        descriptions.add(new Description("Github:", "https://github.com/Nepxion/", 0, 10));
-        descriptions.add(new Description("Blog:", "https://nepxion.iteye.com/", 0, 10));
+        descriptions.add(new Description("Github:", "https://github.com/Nepxion", 0, 10));
+        descriptions.add(new Description("Blog:", "https://nepxion.iteye.com", 0, 10));
 
         DescriptionBanner descriptionBanner = new DescriptionBanner();
         System.out.println(descriptionBanner.getBanner(descriptions));
