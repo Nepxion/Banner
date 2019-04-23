@@ -21,7 +21,7 @@ public class NepxionBannerTest {
     public static void main(String[] args) {
         System.setProperty(BannerConstant.BANNER_SHOWN, "true");
         System.setProperty(BannerConstant.BANNER_SHOWN_ANSI_MODE, "true");
-        
+
         LogoBanner logoBanner = new LogoBanner(NepxionBannerTest.class, "/com/nepxion/banner/resource/logo-permission.txt", "Welcome to Nepxion", 10, 5, new Color[] { Color.red, Color.yellow, Color.cyan, Color.magenta, Color.green, Color.blue, Color.red, Color.yellow, Color.cyan, Color.magenta }, true);
 
         NepxionBanner.show(logoBanner, new Description(BannerConstant.VERSION + ":", "3.0.5", 0, 1), new Description(BannerConstant.GITHUB + ":", BannerConstant.NEPXION_GITHUB, 0, 1));
