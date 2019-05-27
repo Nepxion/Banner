@@ -68,3 +68,7 @@ public class BannerTest {
 运行结果
 
 ![Alt text](https://github.com/Nepxion/Docs/blob/master/banner-doc/Banner.jpg)
+
+## Star走势图
+
+[![Stargazers over time](https://starchart.cc/Nepxion/Banner.svg)](https://starchart.cc/Nepxion/Banner)
