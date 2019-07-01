@@ -11,8 +11,8 @@ Nepxion Banner是一款基于Taobao Text的旗标生成器
 ## 请联系我
 微信和公众号
 
-![Alt text](https://github.com/Nepxion/Docs/blob/master/zxing-doc/微信-1.jpg)
-![Alt text](https://github.com/Nepxion/Docs/blob/master/zxing-doc/公众号-1.jpg)
+![Alt text](https://github.com/Nepxion/Docs/raw/master/zxing-doc/微信-1.jpg)
+![Alt text](https://github.com/Nepxion/Docs/raw/master/zxing-doc/公众号-1.jpg)
 
 ## 依赖
 
@@ -67,7 +67,7 @@ public class BannerTest {
 
 运行结果
 
-![Alt text](https://github.com/Nepxion/Docs/blob/master/banner-doc/Banner.jpg)
+![Alt text](https://github.com/Nepxion/Docs/raw/master/banner-doc/Banner.jpg)
 
 ## Star走势图
 
