@@ -65,4 +65,4 @@ public class BannerTest {
 
 ## Star×ßÊÆÍ¼
 
-[![Stargazers over time](https://starchart.cc/Nepxion/Banner.svg)](https://starchart.cc/Nepxion/Banner)
+[![Stargazers over time](https://starchart.cc/Nepxion/Banner.svg)](https://starchart.cc/Nepxion/Banner) 
