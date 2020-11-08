@@ -64,5 +64,4 @@ public class BannerTest {
 ![](http://nepxion.gitee.io/docs/banner-doc/Banner.jpg)
 
 ## Star×ßÊÆÍ¼
-
 [![Stargazers over time](https://starchart.cc/Nepxion/Banner.svg)](https://starchart.cc/Nepxion/Banner)
